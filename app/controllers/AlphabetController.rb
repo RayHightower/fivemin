@@ -9,9 +9,10 @@ class AlphabetController < UIViewController
     @table = UITableView.alloc.initWithFrame(self.view.bounds)
     self.view.addSubview @table
    
-    @table.datasource = self
+    @table.dataSource = self
+    @table.delegate = self
 
-    @data["A".."Z"].to_a
+    @data = ["A".."Z"].to_a
 
   end
 
