@@ -10,9 +10,13 @@ class AppDelegate
     other_controller.title = "Other"
     other_controller.view.backgroundColor = UIColor.orangeColor
 
+    another_controller = UIViewController.alloc.initWithNibName(nil, bundle: nil)
+    another_controller.title = "Another"
+    another_controller.view.backgroundColor = UIColor.blueColor
+
 
     tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle:nil)
-    tab_controller.viewControllers = [nav_controller, other_controller]
+    tab_controller.viewControllers = [nav_controller, other_controller, another_controller]
 
     @window.rootViewController = tab_controller
 
