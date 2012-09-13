@@ -10,7 +10,7 @@ class TapController < UIViewController
     @label.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)
     self.view.addSubview @label
 
-    self.title = "A New Title"
+    self.title = "A New Title (#{self.navigationController.viewControllers.count})"
     
     rightButton = UIBarButtonItem.alloc.initWithTitle("Push Me", style: UIBarButtonItemStyleBordered, target:self, action:'push')
     self.navigationItem.rightBarButtonItem = rightButton
@@ -18,7 +18,8 @@ class TapController < UIViewController
   end
 
   def push
-    new_controller = TapController.alloc.initiWithNibName(nil, bundle: nil)
+    new_controller = TapController.alloc.initWithNibName(nil, bundle: nil)
     self.navigationController.pushViewController(new_controller, animated: true)
   end
+
 end
