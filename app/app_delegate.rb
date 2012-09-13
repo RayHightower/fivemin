@@ -6,6 +6,11 @@ class AppDelegate
     controller = TapController.alloc.initWithNibName(nil, bundle: nil)
     nav_controller = UINavigationController.alloc.initWithRootViewController(controller)
 
+    other_controller = UIViewController.alloc.initWithNibName(nil, bundle: nil)
+    other_controller.title = "Other"
+    other_controller.view.backgroundColor = UIColor.orangeColor
+
+
     tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle:nil)
     tab_controller.viewControllers = [nav_controller]
 
