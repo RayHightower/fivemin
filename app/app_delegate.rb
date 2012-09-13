@@ -5,6 +5,7 @@ class AppDelegate
 
     controller = TapController.alloc.initWithNibName(nil, bundle: nil)
     nav_controller = UINavigationController.alloc.initWithRootViewController(controller)
+    alphabet_controller = AlphabetController.alloc.initWithNibName(nil, bundle:nil)
 
     other_controller = UIViewController.alloc.initWithNibName(nil, bundle: nil)
     other_controller.title = "Other"
