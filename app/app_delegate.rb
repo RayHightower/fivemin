@@ -4,7 +4,12 @@ class AppDelegate
     @window.makeKeyAndVisible
 
     controller = TapController.alloc.initWithNibName(nil, bundle: nil)
-    @window.rootViewController = UINavigationController.alloc.initWithRootViewController(controller)
+    nav_controller = UINavigationController.alloc.initWIthRootViewController(controller)
+
+    tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle:nil)
+    tab_controller.viewControllers = (nav_controller)
+
+    @window.rootViewController = tab_controller
     
     puts "Hello again in the console!"
 
