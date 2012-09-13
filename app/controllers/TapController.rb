@@ -12,8 +12,13 @@ class TapController < UIViewController
 
     self.title = "A New Title"
     
-    rightButton = UIBarButtonItem.alloc.initWithTitle("Push", style: UIBarButtonItemStyleBordered, target:self, action:'push')
+    rightButton = UIBarButtonItem.alloc.initWithTitle("Push Me", style: UIBarButtonItemStyleBordered, target:self, action:'push')
     self.navigationItem.rightBarButtonItem = rightButton
 
+  end
+
+  def push
+    new_controller = TapController.alloc.initiWithNibName(nil, bundle: nil)
+    self.navigationController.pushViewController(new_controller, animated: true)
   end
 end
