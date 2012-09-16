@@ -17,7 +17,7 @@ class AppDelegate
 
 
     tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle:nil)
-    tab_controller.viewControllers = [alphabet_controller, nav_controller, other_controller, another_controller]
+    tab_controller.viewControllers = [alphabet_controller, nav_controller, another_controller, other_controller]
 
     @window.rootViewController = tab_controller
 

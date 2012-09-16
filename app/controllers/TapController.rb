@@ -12,7 +12,7 @@ class TapController < UIViewController
 
     self.title = "A New Title (#{self.navigationController.viewControllers.count})"
     
-    rightButton = UIBarButtonItem.alloc.initWithTitle("Push Me", style: UIBarButtonItemStyleBordered, target:self, action:'push')
+    rightButton = UIBarButtonItem.alloc.initWithTitle("Press", style: UIBarButtonItemStyleBordered, target:self, action:'push')
     self.navigationItem.rightBarButtonItem = rightButton
 
   end
